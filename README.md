@@ -224,30 +224,83 @@ chains:
 
 Waiting on account to exist on chain and funded.
 
-[client Open]()  
-[connection open]()  
-[channel open]()
-
 ## Quasar
 
 Waiting on account to exist on chain and funded.
 
-[client Open]()  
-[connection open]()  
-[channel open]()
 
 ## Regen
+[client Open](https://www.mintscan.io/regen/txs/2224F4E0BC2804A3F40737B8E49A98C61655F27D87787B851053835D1CF7B4C6)  
+[connection open](https://www.mintscan.io/regen/txs/7E1E0F8EF60020D11678EBAB7610722740A276B8E42F29782F441E2665DB5616)  
+[channel open](https://www.mintscan.io/regen/txs/E101A8E35CF06185F0FD7BA59B3C134BF5B826AB9E429E92DF847C094FBDC0C1)
 
-Waiting on account to exist on chain and funded.
 
-[client Open]()  
-[connection open]()  
-[channel open]()
+### GO RELAYER CONFIG
+
+```
+global:
+  api-listen-addr: :5183
+  timeout: 10s
+  memo: "defiantlabs"
+  light-cache-size: 20
+chains:
+  kujira:
+    type: cosmos
+    value:
+      key: default
+      chain-id: kaiyo-1
+      rpc-addr: https://kujira-rpc.polkachu.com:443
+      account-prefix: kujira
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.025factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk
+      min-gas-amount: 0
+      debug: false
+      timeout: 20s
+      block-timeout: ""
+      output-format: json
+      sign-mode: direct
+      extra-codecs: []
+      coin-type: 118
+      broadcast-mode: batch
+  regen:
+    type: cosmos
+    value:
+      key: default
+      chain-id: regen-1
+      rpc-addr: https://rpc-regen.ecostake.com:443
+      account-prefix: regen
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.025uregen
+      min-gas-amount: 0
+      debug: false
+      timeout: 20s
+      block-timeout: ""
+      output-format: json
+      sign-mode: direct
+      extra-codecs: []
+      coin-type: 118
+      broadcast-mode: batch
+paths:
+    mainnet-kujira-regen:
+      src:
+        chain-id: kaiyo-1
+        client-id: 07-tendermint-106
+        connection-id: connection-76
+      dst:
+        chain-id: regen-1
+        client-id: 07-tendermint-115
+        connection-id: connection-104
+      src-channel-filter:
+        rule: "allowlist"
+        channel-list:
+          - channel-68
+
+```
+
 
 ## Sommelier
 
 Waiting on account to exist on chain and funded.
 
-[client Open]()  
-[connection open]()  
-[channel open]()
