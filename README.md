@@ -58,7 +58,7 @@ chains:
       gas-adjustment: 1.2
       gas-prices: 0.025factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk
       min-gas-amount: 0
-      debug: true
+      debug: false
       timeout: 20s
       block-timeout: ""
       output-format: json
@@ -79,7 +79,6 @@ paths:
     src-channel-filter:
       rule: "allowlist"
       channel-list: [channel-64]
-
 ```
 
 ## AssetMantle
@@ -127,7 +126,7 @@ chains:
       gas-adjustment: 1.2
       gas-prices: 0.025factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk
       min-gas-amount: 0
-      debug: true
+      debug: false
       timeout: 20s
       block-timeout: ""
       output-format: json
@@ -149,7 +148,6 @@ paths:
       rule: "allowlist"
       channel-list:
         - channel-65
-
 ```
 
 ## Crescent
@@ -172,7 +170,7 @@ chains:
     value:
       key: default
       chain-id: crescent-1
-      rpc-addr: https://crescent-rpc.polkachu.com:443
+      rpc-addr: https://mainnet.crescent.network:26657
       account-prefix: cre
       keyring-backend: test
       gas-adjustment: 1.2
@@ -197,7 +195,7 @@ chains:
       gas-adjustment: 1.2
       gas-prices: 0.025factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk
       min-gas-amount: 0
-      debug: true
+      debug: false
       timeout: 20s
       block-timeout: ""
       output-format: json
@@ -205,6 +203,7 @@ chains:
       extra-codecs: []
       coin-type: 118
       broadcast-mode: batch
+paths:
   mainnet-kujira-crescent:
     src:
       chain-id: kaiyo-1
@@ -218,8 +217,8 @@ chains:
       rule: "allowlist"
       channel-list:
         - channel-67
-
 ```
+
 ## Omniflix
 
 Waiting on account to exist on chain and funded.
@@ -228,12 +227,11 @@ Waiting on account to exist on chain and funded.
 
 Waiting on account to exist on chain and funded.
 
-
 ## Regen
+
 [client Open](https://www.mintscan.io/regen/txs/2224F4E0BC2804A3F40737B8E49A98C61655F27D87787B851053835D1CF7B4C6)  
 [connection open](https://www.mintscan.io/regen/txs/7E1E0F8EF60020D11678EBAB7610722740A276B8E42F29782F441E2665DB5616)  
 [channel open](https://www.mintscan.io/regen/txs/E101A8E35CF06185F0FD7BA59B3C134BF5B826AB9E429E92DF847C094FBDC0C1)
-
 
 ### GO RELAYER CONFIG
 
@@ -283,24 +281,86 @@ chains:
       coin-type: 118
       broadcast-mode: batch
 paths:
-    mainnet-kujira-regen:
-      src:
-        chain-id: kaiyo-1
-        client-id: 07-tendermint-106
-        connection-id: connection-76
-      dst:
-        chain-id: regen-1
-        client-id: 07-tendermint-115
-        connection-id: connection-104
-      src-channel-filter:
-        rule: "allowlist"
-        channel-list:
-          - channel-68
-
+  mainnet-kujira-regen:
+    src:
+      chain-id: kaiyo-1
+      client-id: 07-tendermint-106
+      connection-id: connection-76
+    dst:
+      chain-id: regen-1
+      client-id: 07-tendermint-115
+      connection-id: connection-104
+    src-channel-filter:
+      rule: "allowlist"
+      channel-list:
+        - channel-68
 ```
-
 
 ## Sommelier
 
-Waiting on account to exist on chain and funded.
+[client Open](https://www.mintscan.io/sommelier/txs/CF99B798ED84C8EBCDC3160E2F4CA9C96EEC0C8D2C36F616DDDB92DBDDC941E4)
+[connection open](https://www.mintscan.io/sommelier/txs/DA9C39CF9FC2B8B562670CC0580886C222C5D46587ADB68FC61605D53B8D3D5A)  
+[channel open](https://www.mintscan.io/sommelier/txs/48B72D1B5AF5858A277F38949A7FD94022E996C8E0DEA92AD158A198791AC476)
 
+### GO RELAYER CONFIG
+
+```
+global:
+  api-listen-addr: :5183
+  timeout: 10s
+  memo: "defiantlabs"
+  light-cache-size: 20
+chains:
+  kujira:
+    type: cosmos
+    value:
+      key: default
+      chain-id: kaiyo-1
+      rpc-addr: https://kujira-rpc.polkachu.com:443
+      account-prefix: kujira
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.025factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk
+      min-gas-amount: 0
+      debug: false
+      timeout: 20s
+      block-timeout: ""
+      output-format: json
+      sign-mode: direct
+      extra-codecs: []
+      coin-type: 118
+      broadcast-mode: batch
+  sommelier:
+    type: cosmos
+    value:
+      key: default
+      chain-id: sommelier-3
+      rpc-addr: https://rpc-sommelier.pupmos.network:443
+      account-prefix: somm
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.01usomm
+      min-gas-amount: 0
+      debug: false
+      timeout: 20s
+      block-timeout: ""
+      output-format: json
+      sign-mode: direct
+      extra-codecs: []
+      coin-type: 118
+      broadcast-mode: batch
+paths:
+  mainnet-kujira-sommelier:
+    src:
+      chain-id: kaiyo-1
+      client-id: 07-tendermint-107
+      connection-id: connection-77
+    dst:
+      chain-id: sommelier-3
+      client-id: 07-tendermint-12
+      connection-id: connection-8
+    src-channel-filter:
+      rule: "allowlist"
+      channel-list:
+        - channel-69
+```
