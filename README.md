@@ -8,6 +8,7 @@ IBC Paths created and maintained by Defiant Labs
 - [akash1x9fxqdkg4rumkzrck8t3qnhm30jgfsx90ch7fq](https://www.mintscan.io/akash/account/akash1x9fxqdkg4rumkzrck8t3qnhm30jgfsx90ch7fq)
 - [mantle1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9u8pu0s](https://www.mintscan.io/asset-mantle/account/mantle1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9u8pu0s)
 - [cre1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9xtfu9h](https://www.mintscan.io/crescent/account/cre1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9xtfu9h)
+- [omniflix1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9latq8y](https://www.mintscan.io/omniflix/account/omniflix1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9latq8y)
 - [quasar1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9vqqyal]()
 - [regen1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9ap39x7]()
 - [somm1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9wl44ps]()
@@ -219,3 +220,10 @@ chains:
         - channel-67
 
 ```
+## Omniflix
+
+Waiting on account to exist on chain and funded.
+
+[client Open]()  
+[connection open]()  
+[channel open]()
