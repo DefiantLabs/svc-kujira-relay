@@ -5,7 +5,7 @@ IBC Paths created and maintained by Defiant Labs
 ## Proposals
 - [akash](https://blue.kujira.app/govern/369)
 - [assetmantle](https://blue.kujira.app/govern/370)
-- [Crescent](https://blue.kujira.app/govern/371)
+- [crescent](https://blue.kujira.app/govern/371)
 - [omniflixhub](https://blue.kujira.app/govern/372)
 - [regen](https://blue.kujira.app/govern/374)
 - [sommerlier]()
