@@ -404,7 +404,7 @@ chains:
     value:
       key: default
       chain-id: sommelier-3
-      rpc-addr: https://rpc-sommelier.pupmos.network:443
+      rpc-addr: https://rpc.sommelier.strange.love:443
       account-prefix: somm
       keyring-backend: test
       gas-adjustment: 1.2
