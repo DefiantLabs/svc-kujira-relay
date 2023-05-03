@@ -1,8 +1,9 @@
 # svc-kujira-relay
 
-IBC Paths created and maintained by Defiant Labs
+IBC Paths created and maintained by Defiant Labs.  If you want to participate in these paths feel free to use the CONFIGs below.
 
-## Proposals
+## FIN pair Proposals
+Defiant Labs has created several proposals for adding new pairs to Kujira FIN.  
 - [akash](https://blue.kujira.app/govern/369)
 - [assetmantle](https://blue.kujira.app/govern/370)
 - [crescent](https://blue.kujira.app/govern/371)
