@@ -9,7 +9,6 @@ IBC Paths created and maintained by Defiant Labs
 - [mantle1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9u8pu0s](https://www.mintscan.io/asset-mantle/account/mantle1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9u8pu0s)
 - [cre1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9xtfu9h](https://www.mintscan.io/crescent/account/cre1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9xtfu9h)
 - [omniflix1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9latq8y](https://www.mintscan.io/omniflix/account/omniflix1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9latq8y)
-- [quasar1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9vqqyal](https://www.mintscan.io/quasar/account/quasar1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9vqqyal)
 - [regen1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9ap39x7](https://www.mintscan.io/regen/account/regen1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9ap39x7)
 - [somm1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9wl44ps](https://www.mintscan.io/sommelier/account/somm1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9wl44ps)
 
