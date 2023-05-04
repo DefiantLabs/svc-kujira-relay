@@ -9,7 +9,7 @@ Defiant Labs has created several proposals for adding new pairs to Kujira FIN.
 - [crescent](https://blue.kujira.app/govern/371)
 - [omniflixhub](https://blue.kujira.app/govern/372)
 - [regen](https://blue.kujira.app/govern/374)
-- [sommerlier]()
+- [sommerlier](https://blue.kujira.app/govern/375)
 
 ## Wallets
 
