@@ -227,6 +227,75 @@ paths:
         - channel-67
 ```
 
+## Neutron
+
+[client Open](https://www.mintscan.io/kujira/txs/30ABB1B3FD2F027B6CD407F1A11A6CB163A677BB48E3BEBA7BB912DC9489D268?height=10713076)  
+[connection open](https://www.mintscan.io/kujira/txs/30ABB1B3FD2F027B6CD407F1A11A6CB163A677BB48E3BEBA7BB912DC9489D268?height=10713076)  
+[channel open](https://www.mintscan.io/kujira/txs/B53F1C710A688B4ED2A68FB5D1CB561BDF7DE6BAFD9596B6358E38E66B819244?height=10713362)
+
+### GO RELAYER CONFIG
+
+```
+global:
+  api-listen-addr: :5183
+  timeout: 10s
+  memo: "defiantlabs"
+  light-cache-size: 20
+chains:
+  kujira:
+    type: cosmos
+    value:
+      key: default
+      chain-id: kaiyo-1
+      rpc-addr: https://kujira-rpc.polkachu.com:443
+      account-prefix: kujira
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.025factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk
+      min-gas-amount: 0
+      debug: false
+      timeout: 20s
+      block-timeout: ""
+      output-format: json
+      sign-mode: direct
+      extra-codecs: []
+      coin-type: 118
+      broadcast-mode: batch
+  neutron:
+    type: cosmos
+    value:
+      key: default
+      chain-id: neutron-1
+      rpc-addr: https://neutron-rpc.polkachu.com:443
+      account-prefix: neutron
+      keyring-backend: test
+      gas-adjustment: 1.3
+      gas-prices: 0.05ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9
+      min-gas-amount: 0
+      debug: false
+      timeout: 20s
+      block-timeout: ""
+      output-format: json
+      sign-mode: direct
+      extra-codecs: []
+      coin-type: 118
+      broadcast-mode: batch
+paths:
+  mainnet-kujira-neutron:
+    src:
+      chain-id: kaiyo-1
+      client-id: 07-tendermint-112
+      connection-id: connection-82
+    dst:
+      chain-id: neutron-1
+      client-id: 07-tendermint-2
+      connection-id: connection-2
+    src-channel-filter:
+      rule: "allowlist"
+      channel-list:
+        - channel-75
+```
+
 ## Omniflix
 
 [client Open](https://www.mintscan.io/omniflix/txs/46A1E46E5C66B83CED3D53161F372875C8981C319C703D495E0306034B17B15E)  
