@@ -1,9 +1,11 @@
 # svc-kujira-relay
 
-IBC Paths created and maintained by Defiant Labs.  If you want to participate in these paths feel free to use the CONFIGs below.
+IBC Paths created and maintained by Defiant Labs. If you want to participate in these paths feel free to use the CONFIGs below.
 
 ## FIN pair Proposals
-Defiant Labs has created several proposals for adding new pairs to Kujira FIN.  
+
+Defiant Labs has created several proposals for adding new pairs to Kujira FIN.
+
 - [akash](https://blue.kujira.app/govern/369)
 - [assetmantle](https://blue.kujira.app/govern/370)
 - [crescent](https://blue.kujira.app/govern/371)
@@ -19,6 +21,7 @@ Defiant Labs has created several proposals for adding new pairs to Kujira FIN.
 - [mantle1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9u8pu0s](https://www.mintscan.io/asset-mantle/account/mantle1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9u8pu0s)
 - [cre1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9xtfu9h](https://www.mintscan.io/crescent/account/cre1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9xtfu9h)
 - [neutron1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9xunm2a](https://www.mintscan.io/omniflix/account/neutron1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9xunm2a)
+- [noble1x9fxqdkg4rumkzrck8t3qnhm30jgfsx92q03g5](https://www.mintscan.io/noble/account/noble1x9fxqdkg4rumkzrck8t3qnhm30jgfsx92q03g5)
 - [omniflix1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9latq8y](https://www.mintscan.io/omniflix/account/omniflix1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9latq8y)
 - [regen1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9ap39x7](https://www.mintscan.io/regen/account/regen1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9ap39x7)
 - [somm1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9wl44ps](https://www.mintscan.io/sommelier/account/somm1x9fxqdkg4rumkzrck8t3qnhm30jgfsx9wl44ps)
@@ -296,6 +299,72 @@ paths:
       rule: "allowlist"
       channel-list:
         - channel-75
+```
+
+## noble
+
+not created by defiant, just relayed.
+
+### GO RELAYER CONFIG
+
+```
+global:
+  api-listen-addr: :5183
+  timeout: 10s
+  memo: "defiantlabs"
+  light-cache-size: 20
+chains:
+  noble:
+    type: cosmos
+    value:
+      key: default
+      chain-id: noble-1
+      rpc-addr: https://rpc.mainnet.noble.strange.love:443
+      account-prefix: noble
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.0251ibc/EF48E6B1A1A19F47ECAEA62F5670C37C0580E86A9E88498B7E393EB6F49F33C0
+      min-gas-amount: 0
+      debug: false
+      timeout: 20s
+      block-timeout: ""
+      output-format: json
+      sign-mode: direct
+      extra-codecs: []
+      coin-type: 118
+      broadcast-mode: batch
+  kujira:
+    type: cosmos
+    value:
+      key: default
+      chain-id: kaiyo-1
+      rpc-addr: https://kujira-rpc.polkachu.com:443
+      account-prefix: kujira
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.025factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk
+      min-gas-amount: 0
+      debug: false
+      timeout: 20s
+      block-timeout: ""
+      output-format: json
+      sign-mode: direct
+      extra-codecs: []
+      coin-type: 118
+      broadcast-mode: batch
+paths:
+  mainnet-kujira-noble:
+    src:
+      chain-id: kaiyo-1
+      client-id: 07-tendermint-95
+      connection-id: connection-65
+    dst:
+      chain-id: noble-1
+      client-id: 07-tendermint-2
+      connection-id: connection-4
+    src-channel-filter:
+      rule: "allowlist"
+      channel-list: [channel-62]
 ```
 
 ## Omniflix
