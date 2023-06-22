@@ -232,6 +232,85 @@ paths:
         - channel-67
 ```
 
+## Kava
+
+[client Open](https://www.mintscan.io/kujira/txs/9472E10CCECD88728972A490317AA003482ED4C247A1E03B8A18A53C311996BE?height=11846227)  
+[connection open](https://www.mintscan.io/kujira/txs/82CCEB3EBF24C5F4880E3BFA0B759E1287326E96F1A0843E1D76502219AEBACC?height=11846246)  
+[channel open](https://www.mintscan.io/kujira/txs/482289DB65749D81B7D46CE7E4365071FC3284D7EC7F4C4C1337C36F76B8B60A?height=11846265)
+
+### GO RELAYER CONFIG
+
+```
+global:
+  api-listen-addr: :5183
+  timeout: 10s
+  memo: ""
+  light-cache-size: 20
+chains:
+  kava:
+    type: cosmos
+    value:
+      key: default
+      chain-id: kava_2222-10
+      rpc-addr: https://kava-rpc.ibs.team:443
+      account-prefix: kava
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.01ukava
+      min-gas-amount: 0
+      max-gas-amount: 0
+      debug: false
+      timeout: 20s
+      block-timeout: ""
+      output-format: json
+      sign-mode: direct
+      extra-codecs: []
+      coin-type: 459
+      signing-algorithm: ""
+      broadcast-mode: batch
+      min-loop-duration: 0s
+  kujira:
+    type: cosmos
+    value:
+      key: default
+      chain-id: kaiyo-1
+      rpc-addr: https://kujira-rpc.nodes.defiantlabs.net:443
+      account-prefix: kujira
+      keyring-backend: test
+      gas-adjustment: 1.2
+      gas-prices: 0.01ukuji
+      min-gas-amount: 0
+      max-gas-amount: 0
+      debug: false
+      timeout: 20s
+      block-timeout: ""
+      output-format: json
+      sign-mode: direct
+      extra-codecs: []
+      coin-type: 118
+      signing-algorithm: ""
+      broadcast-mode: batch
+      min-loop-duration: 0s
+paths:
+  mainnet-kava-kujira:
+    src:
+      chain-id: kava_2222-10
+      client-id: 07-tendermint-119
+      connection-id: connection-156
+      # Transfer channel
+      # channel-id: channel-95
+    dst:
+      chain-id: kaiyo-1
+      client-id: 07-tendermint-140
+      connection-id: connection-106
+      # Transfer channel
+      # channel-id: channel-116
+    src-channel-filter:
+      rule: ""
+      channel-list: []
+
+```
+
 ## Neutron
 
 [client Open](https://www.mintscan.io/kujira/txs/30ABB1B3FD2F027B6CD407F1A11A6CB163A677BB48E3BEBA7BB912DC9489D268?height=10713076)  
