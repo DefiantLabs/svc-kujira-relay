@@ -292,7 +292,7 @@ chains:
       broadcast-mode: batch
       min-loop-duration: 0s
 paths:
-  mainnet-kava-kujira:
+  mainnet-kujira-kava:
     src:
       chain-id: kava_2222-10
       client-id: 07-tendermint-119
