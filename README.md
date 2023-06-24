@@ -294,20 +294,21 @@ chains:
 paths:
   mainnet-kujira-kava:
     src:
-      chain-id: kava_2222-10
-      client-id: 07-tendermint-119
-      connection-id: connection-156
-      # Transfer channel
-      # channel-id: channel-95
-    dst:
       chain-id: kaiyo-1
       client-id: 07-tendermint-140
       connection-id: connection-106
       # Transfer channel
+      # channel-id: channel-95
+    dst:
+      chain-id: kava_2222-10
+      client-id: 07-tendermint-119
+      connection-id: connection-156
+      # Transfer channel
       # channel-id: channel-116
     src-channel-filter:
       rule: ""
-      channel-list: []
+      channel-list:
+        - channel-95
 
 ```
 
